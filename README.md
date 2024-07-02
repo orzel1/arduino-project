@@ -19,7 +19,7 @@ Technical details are provided below.
 - Piezoelectric speaker
 - Potentiometer
   
-Compiled and written in Arduino IDE.
+Written and compiled in Arduino IDE.
 
 
 # Visual preview
