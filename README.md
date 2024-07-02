@@ -23,10 +23,10 @@ Compiled and written in Arduino IDE.
 
 
 # Visual preview
-![visual_preview](https://github.com/orzel1/arduino-project/assets/109137110/8856341a-2091-4893-a830-ae17621ab29d)
+![visual_preview](https://raw.githubusercontent.com/orzel1/arduino-project/main/visual_preview.png?token=GHSAT0AAAAAACULDRBNQPGCT6P3C3DYO2HQZUD6MEQ)
 
 # Electric scheme
-![scheme](https://github.com/orzel1/arduino-project/assets/109137110/7837c6ae-7b01-40f3-8fd5-0224525ec56d)
+![scheme](https://raw.githubusercontent.com/orzel1/arduino-project/main/scheme.png?token=GHSAT0AAAAAACULDRBM5ZJIC3AVK2CU34EOZUD6MSA)
 
 # Technical details - instruction of use
 As mentioned in the introduction - this is a 32 bit calculator which means that it can propely solve and display the result until it doesn't exceeds the number in range between *-2,147,483,648* to *2,147,483,647.*
