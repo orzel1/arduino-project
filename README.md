@@ -5,6 +5,8 @@ As an aim of my embedded systems project, I've constructed a 32 bit calculator w
 
 [Video preview of the device - Google Drive link](https://1drv.ms/v/c/fc4ff4f0975ccd38/EdAT5jrgN19Hpe1rG4aYv5UBvqlORmu0EhuPB-Lb51SVxg?e=Pi6kqO)
 
+[Test the device on wokwi.com - an awesome arduino simulator](https://wokwi.com/projects/398145993733352449)
+
 Technical details are provided below.
 
 # Build components
@@ -71,4 +73,41 @@ Position of currently inputted data is constantly monitored. This leads to predi
 
 If any type of error had't been detected - the device will inform the user that it ended the calculations by switching On the green LED, providing the result on the LCD screen and making one quick high-pitched beep from piezolectric speaker. To make new calculations - the user will need to press button B3 which will result in resetting the device.
 
+### d) Interface and user communication
+
+This calculator uses five components to communicate with it's user:
+- three LEDs,
+- Piezoelectric speaker,
+- LCD Screen
+
+Communication is laid to user through visual and audio feedback. Current state of the device can be distinguished through number of beeps from piezoelectric speaker, which LEDs are switched on or what type of text message is being shown at the screen.
+
+### First launch
+
+Upon launching the calculator - it performs a self-check sequence. Mentioned sequence consists of actions such as:
+
+- Switching on all LEDs in order: green -> yellow -> red,
+- With every LED switched on, the display shows new communicate (3 communicates in total),
+
+Successful launch procedure will end when all LEDs are switched on and all of the three communicates are shown. In result - a single high-pitched beep from piezolectric speaker will occur signalizing the user that the device is ready to work with. To continue the user needs to press button B1.
+
+**Performing first calculations will result in skipping self-check sequence**
+
+### e) Binary and hexadecimal conversion of the decimal result
+
+When user receives a solution it is possible to convert the decimal result into binary and hexadecimal result through two simple algorithms. Currently I made two separate functions for binary conversion and hexadecimal converstion.
+
+Result of conversion is not stored in a memory of the microcontroller - instead every single converted number is displayed on screen. With every iteration in the loop the previous value of variable is replaced with a new one.
+
 # Current plans on improving the device
+
+### a) In regards to hardware:
+
+- Implementation of an additional button which would enable the user to perform unary operations such as: factorial, square root, exponentation, trigonometry.
+
+### b) In regards to software:
+
+- Implementation of a single universal function which would perform conversion to any number system pointed by the user,
+- Addition of ability to perform calculations with negative integers,
+- Further optimalization of memory usage and speed,
+- Implementation of unary operations.
